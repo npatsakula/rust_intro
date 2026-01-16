@@ -11,11 +11,11 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://your-university.example.com',
-  baseUrl: '/rust-course/',
+  url: 'https://npatsakula.github.io',
+  baseUrl: '/rust_intro/',
 
-  organizationName: 'your-university',
-  projectName: 'rust-course',
+  organizationName: 'npatsakula',
+  projectName: 'rust_intro',
 
   onBrokenLinks: 'throw',
 
@@ -42,7 +42,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/', // Serve docs at the site's root
-          editUrl: 'https://github.com/your-university/rust-course/edit/main/website/',
+          editUrl: 'https://github.com/npatsakula/rust_intro/edit/main/docs/',
         },
         blog: false, // Disable blog
         theme: {
@@ -82,7 +82,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/your-university/rust-course',
+          href: 'https://github.com/npatsakula/rust_intro',
           label: 'GitHub',
           position: 'right',
         },
