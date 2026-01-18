@@ -14,7 +14,7 @@ You know C++. You've written numerical code, dealt with templates, fought with C
 
 Let me be direct: Rust isn't just "C++ but safer." It's a fundamentally different approach to systems programming — one that eliminates entire categories of bugs at compile time while giving you the same (sometimes better) performance.
 
-But before we dive into Rust, let's talk honestly about C++. Not to bash it — we all use it and will continue to use it — but to understand *why* Rust exists and what problems it actually solves.
+But before we dive into Rust, let's talk honestly about C++. Not to bash it — we all use it and will continue to use it — but to understand _why_ Rust exists and what problems it actually solves.
 
 ---
 
@@ -59,9 +59,10 @@ public:
 };
 ```
 
-That's **7 constructors**, **2 assignment operators**, and a **destructor**. The Rule of Zero, Rule of Three, Rule of Five — we need *rules* just to remember what we need to write.
+That's **7 constructors**, **2 assignment operators**, and a **destructor**. The Rule of Zero, Rule of Three, Rule of Five — we need _rules_ just to remember what we need to write.
 
 And it gets worse. Each of those constructors can be:
+
 - `explicit` or implicit
 - `constexpr` or not
 - `noexcept` or throwing
@@ -89,7 +90,7 @@ impl Matrix {
 }
 ```
 
-That's it. No copy constructor — you implement `Clone` trait if you want copying. No move constructor — *everything* moves by default. No destructor — `Drop` trait is there if you need custom cleanup, but usually you don't.
+That's it. No copy constructor — you implement `Clone` trait if you want copying. No move constructor — _everything_ moves by default. No destructor — `Drop` trait is there if you need custom cleanup, but usually you don't.
 
 ### The `auto` Return Type Sin
 
@@ -121,6 +122,7 @@ int main() {
 ```
 
 What's the return type of `getElements()`? It's something like:
+
 ```cpp
 std::ranges::transform_view<std::ranges::ref_view<std::vector<int>>, lambda>
 ```
@@ -144,7 +146,7 @@ fn broken() -> &[i32] {
 }
 ```
 
-The ownership system makes it *impossible* to write the buggy version.
+The ownership system makes it _impossible_ to write the buggy version.
 
 ### The Diamond of Death
 
@@ -245,6 +247,7 @@ auto result = numbers | std::views::filter([](std::string s) { return s.empty();
 ```
 
 **Rust iterators** are lazy too, but:
+
 - They're zero-cost (no type erasure)
 - The ownership system prevents dangling
 - Error messages are readable
@@ -395,6 +398,7 @@ void parallel_process(std::vector<double>& data) {
 ```
 
 This works, but:
+
 - It's a compiler extension, not part of the language
 - Data race protection is your responsibility
 - Composability is limited (nested parallelism is tricky)
@@ -584,15 +588,15 @@ target_compile_options(my_simulation PRIVATE -Wall -Wextra -O3)
 
 ### The Toolchain
 
-| Tool | What it does |
-|------|--------------|
-| `cargo build` | Compiles your project |
-| `cargo test` | Runs tests |
-| `cargo doc` | Generates documentation |
-| `cargo fmt` | Formats code (one true style) |
-| `cargo clippy` | Lints for common mistakes |
-| `cargo bench` | Runs benchmarks |
-| `cargo publish` | Publishes to crates.io |
+| Tool            | What it does                  |
+| --------------- | ----------------------------- |
+| `cargo build`   | Compiles your project         |
+| `cargo test`    | Runs tests                    |
+| `cargo doc`     | Generates documentation       |
+| `cargo fmt`     | Formats code (one true style) |
+| `cargo clippy`  | Lints for common mistakes     |
+| `cargo bench`   | Runs benchmarks               |
+| `cargo publish` | Publishes to crates.io        |
 
 All built-in. All work together. No configuration needed.
 
@@ -603,6 +607,7 @@ All built-in. All work together. No configuration needed.
 - **[lib.rs](https://lib.rs)** — Better search and categorization
 
 For scientific computing specifically:
+
 - `nalgebra` — Linear algebra (like Eigen)
 - `ndarray` — N-dimensional arrays (like NumPy)
 - `russell` — Tensors and ODE solvers
@@ -698,10 +703,11 @@ fn main() {
 ### The Key Invariant
 
 At any time, you can have:
+
 - **Many** immutable references (`&T`), OR
 - **One** mutable reference (`&mut T`)
 
-Never both. This prevents data races *at compile time*.
+Never both. This prevents data races _at compile time_.
 
 ```rust
 fn main() {
@@ -759,7 +765,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 }
 ```
 
-The `'a` is a *lifetime parameter*. It's not something you write often — the compiler infers lifetimes in most cases. But when it can't, you make the relationships explicit.
+The `'a` is a _lifetime parameter_. It's not something you write often — the compiler infers lifetimes in most cases. But when it can't, you make the relationships explicit.
 
 ---
 
@@ -768,15 +774,16 @@ The `'a` is a *lifetime parameter*. It's not something you write often — the c
 C++ is powerful, but its complexity has grown beyond what any single person can master. Every new feature adds edge cases, every edge case adds bugs.
 
 Rust takes a different approach:
+
 - **Ownership** instead of manual memory management
 - **Borrowing** with compile-time checking instead of hoping you got it right
 - **Sum types** that force you to handle all cases
-- **Traits** instead of inheritance hierarchies
+- **Traits** (covered in [Lecture 2](./lecture-02.md)) instead of inheritance hierarchies
 - **One build system** that just works
 
 The learning curve is real. The compiler will fight you at first. But once you internalize the ownership model, you'll find yourself writing correct code faster than you did in C++.
 
-Next lecture, we'll dive deeper into Rust's type system — traits, generics, and error handling.
+In [Lecture 2](./lecture-02.md), we'll build on this foundation to explore Rust's powerful type system, traits for polymorphism, and how to organize large scientific codebases. The ownership you learned here is the foundation—traits and generics are the flexible abstractions that make it practical for real-world applications.
 
 ---
 
