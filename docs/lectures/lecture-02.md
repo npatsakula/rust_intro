@@ -354,9 +354,9 @@ fn square<T: Numeric>(value: T) -> T {
 // Or use where clause
 fn cube<T>(value: T) -> T
 where
-    T: std::ops::Mul<Output = T> + std::ops::Mul<f64, Output = T> + Copy,
+    T: std::ops::Mul<Output = T> + Copy,
 {
-    value * value * (value as f64)
+    value * value * value
 }
 ```
 
@@ -778,6 +778,7 @@ impl Function<f64> for Rosenbrock {
         a * a + 100.0 * b * b
     }
 }
+```
 
 ### Mathematical Derivation: Rosenbrock Gradient
 
@@ -823,7 +824,7 @@ d/dy [100(y-x^2)^2] = 200(y-x^2)
 
 df/dy = 200(y-x^2)
 
-````
+```
 
 Now let's verify the implementation:
 
@@ -838,7 +839,7 @@ df_dx0 = -400x·(y - x^2) - 2(1 - x)
 
 df_dx1 = 200.0 * (x[1] - x[0] * x[0]);
        = 200(y - x^2)                      ✅ Matches!
-````
+```
 
 ```rust
 impl Gradient<f64> for Rosenbrock {
@@ -1811,7 +1812,7 @@ nalgebra = "0.33"
 [package]
 name = "my_project_cli"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 my_project_core = { path = "../core" }
@@ -1874,7 +1875,7 @@ resolver = "2"
 
 [workspace.package]
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 authors = ["Your Name <you@example.com>"]
 license = "MIT OR Apache-2.0"
 
@@ -1957,6 +1958,7 @@ for value in data.into_iter() {
     println!("{}", value);  // value is f64 (owned)
 }
 // After: data is GONE (moved!)
+```
 
 **Mapping to Lecture 1's Ownership Rules:**
 - `iter()` → Many immutable borrows (`&T`) from Lecture 1
@@ -1964,7 +1966,6 @@ for value in data.into_iter() {
 - `into_iter()` → Ownership transfer (move) from Lecture 1
 
 Same rules, just applied to sequences! This is why Rust's ownership system feels consistent across the language.
-```
 
 **Visual Memory Flow:**
 

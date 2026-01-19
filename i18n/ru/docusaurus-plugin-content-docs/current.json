@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.courseSidebar.category.Block I: From C++ to Rust": {
+    "message": "Block I: From C++ to Rust",
+    "description": "The label for category 'Block I: From C++ to Rust' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 1: Ecosystem & Ownership": {
+    "message": "Lecture 1: Ecosystem & Ownership",
+    "description": "The label for category 'Lecture 1: Ecosystem & Ownership' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 2: Types, Traits & Modules": {
+    "message": "Lecture 2: Types, Traits & Modules",
+    "description": "The label for category 'Lecture 2: Types, Traits & Modules' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Block II: Mathematical Tooling": {
+    "message": "Block II: Mathematical Tooling",
+    "description": "The label for category 'Block II: Mathematical Tooling' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 3: Linear Algebra & Tensors": {
+    "message": "Lecture 3: Linear Algebra & Tensors",
+    "description": "The label for category 'Lecture 3: Linear Algebra & Tensors' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 4: Statistics & ML": {
+    "message": "Lecture 4: Statistics & ML",
+    "description": "The label for category 'Lecture 4: Statistics & ML' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Block III: Domain Applications": {
+    "message": "Block III: Domain Applications",
+    "description": "The label for category 'Block III: Domain Applications' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 5: Numerical Methods & FEM": {
+    "message": "Lecture 5: Numerical Methods & FEM",
+    "description": "The label for category 'Lecture 5: Numerical Methods & FEM' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Block IV: Advanced Rust": {
+    "message": "Block IV: Advanced Rust",
+    "description": "The label for category 'Block IV: Advanced Rust' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 6: Unsafe & FFI": {
+    "message": "Lecture 6: Unsafe & FFI",
+    "description": "The label for category 'Lecture 6: Unsafe & FFI' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Lecture 7: Verification & Production": {
+    "message": "Lecture 7: Verification & Production",
+    "description": "The label for category 'Lecture 7: Verification & Production' in sidebar 'courseSidebar'"
+  },
+  "sidebar.courseSidebar.category.Appendix": {
+    "message": "Appendix",
+    "description": "The label for category 'Appendix' in sidebar 'courseSidebar'"
+  }
+}

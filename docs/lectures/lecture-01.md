@@ -547,7 +547,7 @@ Your `Cargo.toml`:
 [package]
 name = "my_simulation"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
 
 [dependencies]
 nalgebra = "0.33"

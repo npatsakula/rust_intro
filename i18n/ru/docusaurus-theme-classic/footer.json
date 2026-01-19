@@ -1,0 +1,54 @@
+{
+  "link.title.Course": {
+    "message": "Course",
+    "description": "The title of the footer links column with title=Course in the footer"
+  },
+  "link.title.Resources": {
+    "message": "Resources",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.Scientific Libraries": {
+    "message": "Scientific Libraries",
+    "description": "The title of the footer links column with title=Scientific Libraries in the footer"
+  },
+  "link.item.label.Introduction": {
+    "message": "Introduction",
+    "description": "The label of footer link with label=Introduction linking to /"
+  },
+  "link.item.label.Lectures": {
+    "message": "Lectures",
+    "description": "The label of footer link with label=Lectures linking to /lectures/lecture-01"
+  },
+  "link.item.label.Seminars": {
+    "message": "Seminars",
+    "description": "The label of footer link with label=Seminars linking to /seminars/seminar-01-1"
+  },
+  "link.item.label.Rust Book": {
+    "message": "Rust Book",
+    "description": "The label of footer link with label=Rust Book linking to https://doc.rust-lang.org/book/"
+  },
+  "link.item.label.Rustonomicon": {
+    "message": "Rustonomicon",
+    "description": "The label of footer link with label=Rustonomicon linking to https://doc.rust-lang.org/nomicon/"
+  },
+  "link.item.label.Rust Playground": {
+    "message": "Rust Playground",
+    "description": "The label of footer link with label=Rust Playground linking to https://play.rust-lang.org/"
+  },
+  "link.item.label.nalgebra": {
+    "message": "nalgebra",
+    "description": "The label of footer link with label=nalgebra linking to https://nalgebra.org/"
+  },
+  "link.item.label.russell": {
+    "message": "russell",
+    "description": "The label of footer link with label=russell linking to https://github.com/cpmech/russell"
+  },
+  "link.item.label.linfa": {
+    "message": "linfa",
+    "description": "The label of footer link with label=linfa linking to https://rust-ml.github.io/linfa/"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 Faculty of Applied Math and Computer Science. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}
